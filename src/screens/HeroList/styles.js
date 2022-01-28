@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export const Container = styled.View`
@@ -54,11 +55,6 @@ export const ContainerLista = styled.View`
   margin: 4px 0 12px;
   padding: 0 15px;
 `;
-export const ButtonIcon = styled(Icon)`
-  color: #1e2047;
-  font-size: 20px;
-`;
-
 export const InputTextLista = styled.TextInput`
   flex: 1;
   color: #222222;
@@ -77,6 +73,24 @@ export const FlatListCharacters = styled.FlatList.attrs({
 
 export const Separator = styled.View`
   width: 100%;
-  height: 2px;
+  height: ${props => (props.size ? props.size : 1)}px;
   background-color: #d42026;
+`;
+
+export const ButtonIcon = styled(Icon)`
+  color: #1e2047;
+  font-size: 20px;
+`;
+
+export const ActivityIndicator = styled.ActivityIndicator``;
+
+export const ContainerLoad = styled.View`
+  flex: 1;
+  justify-content: center;
+`;
+export const ContentError = styled.View`
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 10px;
 `;

@@ -1,5 +1,4 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import {TouchableOpacity} from 'react-native-gesture-handler';
 
 import * as S from './styles';
@@ -17,6 +16,7 @@ function HeroFooter({total, offset, setOffset}) {
   function onPageChange(page) {
     setOffset((page - 1) * limit);
   }
+
   return (
     <S.Container>
       <TouchableOpacity
@@ -27,8 +27,11 @@ function HeroFooter({total, offset, setOffset}) {
       {Array.from({length: Math.min(MAX_ITEMS, pages)})
         .map((_, index) => index + first)
         .map(page => (
-          <S.Button onPress={() => onPageChange(page)} key={page}>
-            <S.TextCard>{page}</S.TextCard>
+          <S.Button
+            onPress={() => onPageChange(page)}
+            key={page}
+            selectedColor={current === page}>
+            <S.TextCard selectedColor={current === page}>{page}</S.TextCard>
           </S.Button>
         ))}
       <TouchableOpacity

@@ -2,17 +2,18 @@ import styled from 'styled-components/native';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 
 export const Container = styled.View`
+  margin: 15px 0
   flex-direction: row;
   justify-content: center;
   align-items: center;
 `;
 
 export const Button = styled.TouchableOpacity`
-  margin: 18px 0px 0 15px;
+  margin: 0 7.5px;
 
   width: 50px;
   height: 50px;
-  background: #ffffff;
+  background: ${({selectedColor}) => (selectedColor ? '#d42026' : '#ffffff')};
   border: 2px solid #d42026;
   border-radius: 50px;
   justify-content: center;
@@ -24,10 +25,10 @@ export const TextCard = styled.Text`
   font-size: 20px;
   font-weight: 600;
   line-height: 19px;
-  color: #d42026;
+  color: ${({selectedColor}) => (selectedColor ? '#ffffff' : '#d42026')}; ;
 `;
 export const ButtonIcon = styled(Icon)`
-  margin: 18px 30px 0 30px;
+  top: 0px;
   color: #d42026;
   font-size: 60px;
 `;
