@@ -40,7 +40,7 @@ export const HeaderList = styled.View`
   justify-content: center;
   align-items: center;
 `;
-export const ContainerLista = styled.View`
+export const ContainerInput = styled.View`
   width: 90%;
   height: 40px;
   flex-direction: row;
@@ -55,7 +55,7 @@ export const ContainerLista = styled.View`
   margin: 4px 0 12px;
   padding: 0 15px;
 `;
-export const InputTextLista = styled.TextInput`
+export const InputText = styled.TextInput`
   flex: 1;
   color: #222222;
   font-size: 16px;

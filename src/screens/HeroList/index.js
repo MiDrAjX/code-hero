@@ -80,11 +80,11 @@ function HeroList() {
         </S.TitleWrapper>
         <View>
           <S.Title>Nome do Personagem</S.Title>
-          <S.ContainerLista>
+          <S.ContainerInput>
             <TouchableOpacity onPress={searchCharacters}>
               <S.ButtonIcon name="search" />
             </TouchableOpacity>
-            <S.InputTextLista
+            <S.InputText
               keyboardAppearance="light"
               placeholderTextColor="#959595"
               autoCorrect={false}
@@ -94,7 +94,7 @@ function HeroList() {
               onBlur={() => searchCharacters()}
               onChangeText={e => setSearch(e)}
             />
-          </S.ContainerLista>
+          </S.ContainerInput>
         </View>
         <S.HeaderList>
           <S.TextWhite>Nome</S.TextWhite>

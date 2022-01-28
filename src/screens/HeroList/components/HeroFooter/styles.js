@@ -32,9 +32,3 @@ export const ButtonIcon = styled(Icon)`
   color: #d42026;
   font-size: 60px;
 `;
-
-export const Separator = styled.View`
-  width: 100%;
-  height: 2px;
-  background-color: #d42026;
-`;
