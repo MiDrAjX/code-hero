@@ -7,7 +7,7 @@ function HeroOverView() {
   const route = useRoute('CharacterOverView');
   const {item} = route.params;
   const image = item.thumbnail.path + '.' + item.thumbnail.extension;
-  console.log(item);
+
   const navigation = useNavigation();
 
   const handleReturn = useCallback(() => {

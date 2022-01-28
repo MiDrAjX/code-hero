@@ -30,7 +30,7 @@ function HeroList() {
   }
   async function searchCharacters(name = search, index = offset) {
     const response = await Characters.showCharacter(name, index);
-    console.log(response);
+
     if (!response.ok) {
       setError(true);
       return;
