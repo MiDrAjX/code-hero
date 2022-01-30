@@ -129,25 +129,3 @@ function HeroList() {
 
 export default HeroList;
 
-/**
- *  {search === '' ? (
-        <>
- *  ) : (
-        <>
-          <S.FlatListCharacters
-            data={searchCharacter.results}
-            keyExtractor={item => String(item.id)}
-            renderItem={({item}) => <HeroCard item={item} />}
-            ItemSeparatorComponent={() => <S.Separator />}
-            ListFooterComponent={() => (
-              <HeroFooter
-                total={searchCharacter.total}
-                offset={offset}
-                setOffset={setOffset}
-              />
-            )}
-          />
-        </>
-      )}
-      </>
- */
